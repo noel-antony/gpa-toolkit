@@ -1,67 +1,59 @@
-﻿# GPA Analyzer
+﻿# 🎓 GPA Toolkit
 
-A modern, responsive GPA calculator and target planner built with React and Tailwind CSS. The analyzer features automatic point interpolation, grade estimation, and a powerful "Target Planner" to determine precisely what marks are needed to achieve a specific Semester or Cumulative GPA.
+A beautiful, fully responsive **GPA Calculator & Target Planner** built from the ground up with **React** and **Tailwind CSS**. It helps students track current performance and mathematically plan out the precise scores needed to hit graduation targets.
 
-## Features
+---
 
-- **Calculator Mode**: Instantly compute SGPA and update projections as you input raw internals, externals, or expected grades for each subject.
-- **Target Planner Mode**: 
-  - Input a target SGPA or CGPA.
-  - Automatically back-calculates the required marks in the remaining external subjects.
-  - Interactive "locking" mechanism: lock specific subjects or externals, and let the planner automatically redistribute the remaining required marks across the rest of the subjects.
-- **Visual Analytics**: Interactive grading charts and stat cards to give a clear breakdown of grade distributions.
-- **Local Storage Integration**: Ensures all your inputs, subjects, and parameters persist across reloads.
-- **Theming**: Grade-color coding and highly responsive, sleek teal/dark UI powered by Tailwind CSS.
+## ✨ Core Features
 
-## Project Structure
+- **📱 Beautiful Responsive UI:** Grade-color coded interface built with Tailwind CSS, seamlessly snapping from mobile to ultra-wide displays.
+- **📊 Real-time Math:** Point interpolation dynamically changes SGPA bounds based on specific Internal (max 50) and External (max 100) university marks.
+- **🎯 Target Architect:** The powerful Target Planner computes exactly what external scores you need out of 100 to reverse-engineer a specific SGPA or CGPA target.
+- **🔒 Context Locks:** Lock specific subjects and the planner automatically trickles down your required points to all remaining unlocked subjects.
+- **💾 Local Persistence:** Browser localStorage natively caches all entered grades and configuration values to never lose your working state.
 
-The project has been organized for clarity and maintainability:
+---
 
-`
-src/
-├── components/          # Reusable UI building blocks
-│   ├── GradeBarChart.jsx  # Recharts implementation for grade distributions
-│   ├── GradeTooltip.jsx   # Custom tooltip for charts
-│   ├── StatCard.jsx       # Analytical KPI displays (Target SGPA etc)
-│   ├── SubjectRow.jsx     # Individual subject inputs in Calculator
-│   ├── SubjectTable.jsx   # Main wrapper for subject entries
-│   └── TinySnackbar.jsx   # Toast notifications
-│
-├── pages/               # Top-level route modules
-│   ├── CalculatorPage.jsx # Core "What is my GPA?" page
-│   └── TargetPage.jsx     # Complex "How to get this GPA?" planner 
-│
-├── utils/               # Pure business-logic & helper functions
-│   ├── gpa.js             # Core math for points, credits, required marks
-│   ├── grading.js         # Constants/helpers for grade themes, bounds
-│   └── storage.js         # AppState localStorage serialization wrapper
-│
-├── App.jsx              # Main Router and State container
-├── index.css            # Tailwind directives and base CSS
-└── main.jsx             # React DOM initialization
-`
+## 🛠️ Project Structure
 
-## Running Locally
+The project has been extensively modularized into standard React feature directories.
 
-1. Install dependencies:
-   `ash
+- **src/pages/** (*Route views*)
+  - **CalculatorPage.jsx** — The standard *"What is my GPA?"* view.
+  - **TargetPage.jsx** — The complex backward-calculating *"How do I get this GPA?"* view.
+  
+- **src/components/** (*Reusable UI building blocks*)
+  - **GradeBarChart.jsx** / **GradeTooltip.jsx** — Recharts graph integrations.
+  - **StatCard.jsx** — Clean, animated stat cards displaying metrics.
+  - **SubjectTable.jsx** / **SubjectRow.jsx** — The core dynamic list of inputs for internals, externals, and grades.
+  - **TinySnackbar.jsx** — Lightweight notification feedback toaster.
+  - **HelpModal.jsx** — Quick interactive visual guide overlay.
+
+- **src/utils/** (*Pure application logic*)
+  - **gpa.js** — Advanced mathematically pure constraints, required grading, credits aggregation, and logic.
+  - **grading.js** — Grade lookup tables and Tailwind theme bindings for specific marks (e.g., S → Green, F → Red).
+  - **storage.js** — Safely handles hydration and serialization against browser LocalStorage window state.
+
+---
+
+## 🚀 Running Locally
+
+1. **Install runtime dependencies:**
+   \\\ash
    npm install
-   `
+   \\\
 
-2. Start the Vite dev server:
-   `ash
+2. **Spin up the Vite development server:**
+   \\\ash
    npm run dev
-   `
+   \\\
 
-3. Build for production:
-   `ash
+3. **Build optimized bundles for production:**
+   \\\ash
    npm run build
-   `
+   \\\
 
-## Technology Stack
+---
 
-- **React 19**
-- **React Router v7**
-- **Vite**
-- **Tailwind CSS 3.4**
-- **Recharts**
+### *Powered up by:*
+**React 19** • **Vite** • **Tailwind CSS 3.4** • **React Router v7** • **Recharts**
