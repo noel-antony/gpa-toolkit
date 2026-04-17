@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #d1d5db;
+  font-family: 'DM Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 10%, rgba(20, 184, 166, 0.16), transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(15, 118, 110, 0.24), transparent 35%),
+    #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type='range'] {
+  accent-color: #14b8a6;
+}
