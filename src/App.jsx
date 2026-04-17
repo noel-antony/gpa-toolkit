@@ -82,7 +82,7 @@ function App() {
         <header className="relative flex flex-col gap-4 rounded-2xl border-[0.5px] border-teal-500/25 bg-gradient-to-br from-slate-900/88 via-slate-900/84 to-teal-900/18 p-5 shadow-glow backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-start justify-between">
             <div>
-              <h1 className="text-2xl font-black tracking-tight text-white sm:text-3xl">GPA Flow</h1>
+              <h1 className="text-2xl font-black tracking-tight text-white sm:text-3xl">GPA Toolkit</h1>
               <p className="text-sm text-slate-300">Real-time SGPA and CGPA with planning tools</p>
             </div>
             {/* Mobile Help Button */}

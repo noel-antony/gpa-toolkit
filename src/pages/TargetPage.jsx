@@ -443,6 +443,16 @@ function TargetPage({ appState, updateState }) {
         </div>
 
         <div className="space-y-3 md:space-y-4 pt-4">
+          <div 
+            className="hidden md:grid md:items-center gap-4 px-4 pb-2 text-xs font-bold uppercase tracking-wider text-slate-400"
+            style={{ gridTemplateColumns: 'minmax(0,2fr) minmax(80px, 0.7fr) minmax(240px, 2fr) minmax(130px, 1fr) 44px' }}
+          >
+            <div>Subject</div>
+            <div className="text-center">Internal</div>
+            <div className="text-center">External required</div>
+            <div className="text-center">Grade</div>
+            <div className="text-center">Lock</div>
+          </div>
           {plannerSubjects.map((subject) => {
             const metrics = getSubjectMetrics(subject)
             const isLocked = Boolean(lockedSubjects[subject.id])
